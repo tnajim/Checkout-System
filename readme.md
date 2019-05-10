@@ -1,5 +1,10 @@
 # Checkout System using Laravel
 
+## Environment Setup
+- [XAMPP](https://www.apachefriends.org/index.html) PHP >= 7
+- [Composer](https://getcomposer.org/)
+- [Git bash terminal](https://git-scm.com/downloads)
+
 ## Setup the Project
 
 - Pull the project from github to your `C:\xampp\htdocs` folder or wherever your `htdocs` folder is located
