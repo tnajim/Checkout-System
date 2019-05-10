@@ -13,7 +13,8 @@
 	<button onclick="scanOrange()">Scan Orange</button>
 	<br><br>
 	<button onclick="checkout()">Checkout</button>
-	<p id="totalans"></p>
+	<br>
+	<b>Total Price: </b><span id="totalans"></span>
 	<p id="appleVal"></p>
 	<p id="orangeVal"></p>
 	<script>

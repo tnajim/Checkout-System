@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'PagesController@HomePage');
 
-Route::get('/discount', function () {
-    return view('discount');
-});
+Route::get('/discount', 'PagesController@DiscountPage');

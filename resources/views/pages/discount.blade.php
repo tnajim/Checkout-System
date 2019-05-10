@@ -23,6 +23,7 @@
     <p id="appleVal1"></p>
 	<p id="orangeVal"></p>
     <p id="orangeVal1"></p>
+    
 	<script>
 	function scanApple(){
 	var value = parseInt(document.getElementById('apple').value, 10);
