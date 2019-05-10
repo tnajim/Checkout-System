@@ -17,6 +17,8 @@
 	<b>Total Price: </b><span id="totalans"></span>
 	<p id="appleVal"></p>
 	<p id="orangeVal"></p>
+	<br>
+	
 	<script>
 	function scanApple(){
 	var value = parseInt(document.getElementById('apple').value, 10);
