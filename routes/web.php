@@ -14,4 +14,7 @@
 Route::get('/', 'PagesController@HomePage');
 Route::get('/discount', 'PagesController@DiscountPage');
 
+Route::post('/homepost', 'PagesController@homeinsert');
+Route::post('/discountpost', 'PagesController@discountinsert');
+
 Route::resource('posts','PostsController');

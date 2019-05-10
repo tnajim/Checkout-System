@@ -22,7 +22,10 @@
 ```
 - Run Apache server using **XAMPP**
 - Open `laravelcheckout.test` in your browser or `localhost/laravelcheckout/public`if it is not working or displaying correctly
+- Create a database in your `localhost/phpmyadmin` named `laravelcheckout`
+- Open **git bash** or your preferred command line and run the `composer migrate` command to migrate tables
 - Input the quantity of apples and oranges by typing in the fields or by using the **Scan** button then press the **Checkout** button to display the total price
+- Press the **Insert to Database** button input the data into the database
 
 ## Testing the Project
 

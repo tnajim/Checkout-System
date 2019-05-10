@@ -2,27 +2,30 @@
 
 @section('content')
 <h3><a href = "/">Regular Checkout</a></h3>
-<center>
 	<h1>Checkout System with New Offers</h1>
+    <form action="/discountpost" method="post">
+	{{ csrf_field() }}
 	Apples $ 0.70
 	<input type="number" name="apples" id="apple" min="0" max="999" value="0"> 
-	<button onclick="scanApple()">Scan Apple</button>
+	<button type="button" onclick="scanApple()">Scan Apple</button>
 	<br>
 	Oranges $ 0.35
 	<input type="number" name="oranges" id="orange" min="0" max="999" value="0"> 
-	<button onclick="scanOrange()">Scan Orange</button>
+	<button type="button" onclick="scanOrange()">Scan Orange</button>
 	<br>
     <br>
     <h3>New Offers Available!</h3>
     <h3>Buy one, get one free on Apples</h3>
     <h3>3 for the Price of 2 on Oranges</h3>
-	<button onclick="checkout()">Checkout</button>
-    <br>
-    <b>Total Price: </b><span id="totalans"></span>
+	<button type="button" onclick="checkout()">Checkout</button>
+    <br><br>
+    <b>Total Price: </b>
+	$<input type="text" name="totalprice" id="totalans"> 
 	<p id="appleVal"></p>
-    <p id="appleVal1"></p>
 	<p id="orangeVal"></p>
+    <p id="appleVal1"></p>
     <p id="orangeVal1"></p>
+    <input type="submit" id="button2" value="Insert to Database" disabled>
     
 	<script>
 	function scanApple(){
@@ -72,13 +75,13 @@
 
 	var totalprice = (applespriced*appleprice)+(orangespriced*orangeprice);
 	totalprice = parseFloat(Math.round(totalprice * 100) / 100).toFixed(2);;
-	document.getElementById('totalans').innerHTML = '$ '+totalprice;
+	document.getElementById("totalans").value = totalprice;
     document.getElementById('appleVal').innerHTML = apples+' Apple/s';
-    document.getElementById('appleVal1').innerHTML = applesdisc+' Apple/s Discounted';
     document.getElementById('orangeVal').innerHTML = oranges+' Orange/s';
+    document.getElementById('appleVal1').innerHTML = applesdisc+' Apple/s Discounted';
     document.getElementById('orangeVal1').innerHTML = orangesdisc+' Orange/s Discounted';
+    document.getElementById("button2").disabled = false;
 }
 	</script>
-</center>
 <!-- end of content section -->
 @endsection
