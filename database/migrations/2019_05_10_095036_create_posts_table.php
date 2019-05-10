@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->integer('apples');
             $table->integer('oranges');
             $table->double('price', 8, 2);
-            $table->timestamps();
+            $table->text('discounted');
         });
     }
 
